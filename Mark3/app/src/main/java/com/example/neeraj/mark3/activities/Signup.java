@@ -1,30 +1,23 @@
 package com.example.neeraj.mark3.activities;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.neeraj.mark3.R;
 
 /**
  * Created by NEERAJ on 08-May-15.
  */
-public class Signup extends Activity {
+public class Signup extends Activity{
 
 
     private static int rli = 1;
