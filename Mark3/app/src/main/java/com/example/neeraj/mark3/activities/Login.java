@@ -7,9 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import com.example.neeraj.mark3.R;
+import com.parse.LogInCallback;
 import com.parse.ParseUser;
-import com.parse.SignUpCallback;
 
 /**
  * Created by NEERAJ on 08-May-15.
@@ -38,22 +39,16 @@ public class Login extends Activity {
                 username = usernameet.getText().toString();
                 password = passwordet.getText().toString();
 
-                ParseUser user = new ParseUser();
-                user.setUsername(username);
-                user.setPassword(password);
-
-                user.signUpInBackground(new SignUpCallback() {
-                    @Override
-                    public void done(com.parse.ParseException e) {
-                        if (e == null) {
-                            // Hooray! Let them use the app now.
+                ParseUser.logInInBackground(username, password , new LogInCallback() {
+                    public void done(ParseUser user, com.parse.ParseException e) {
+                        if (user != null) {
+                            // Hooray! The user is logged in.
                             Intent i = new Intent(Login.this, Mainpage.class);
                             startActivity(i);
                         } else {
-                            // Sign up didn't succeed. Look at the ParseException
-                            // to figure out what went wrong
-                            Toast toast1 = Toast.makeText(getApplicationContext(), "wrong username or password", Toast.LENGTH_SHORT);
-                            toast1.show();
+                            // Signup failed. Look at the ParseException to see what happened.
+                            Toast t1 = Toast.makeText(getApplicationContext(),"Wrong username or Password",Toast.LENGTH_SHORT);
+                            t1.show();
                         }
                     }
                 });
@@ -63,9 +58,8 @@ public class Login extends Activity {
         signupbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent i = new Intent(Login.this, Signup.class);
-                startActivity(i);
+                Intent i2 = new Intent(Login.this, Signup.class);
+                startActivity(i2);
             }
         });
     }
