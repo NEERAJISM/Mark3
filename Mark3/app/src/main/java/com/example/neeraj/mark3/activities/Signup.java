@@ -26,10 +26,10 @@ public class Signup extends Activity {
     private static int rli = 1;
 
     ImageView buttonselecti;
-    EditText name1, day1, month1, year1, password1;
+    EditText name1, day1, month1, year1, password1,email,mobileno;
     Button bsignup;
 
-    String usernames, passwords;
+    String string_username, string_password,string_email,string_mobile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +40,8 @@ public class Signup extends Activity {
         buttonselecti = (ImageView) findViewById(R.id.imageview_propicfb);
         name1 = (EditText) findViewById(R.id.EditTextname);
         password1 = (EditText) findViewById(R.id.EditTextpassword);
-        day1 = (EditText) findViewById(R.id.editTextViewdate);
-        month1 = (EditText) findViewById(R.id.editTextViewmonth);
-        year1 = (EditText) findViewById(R.id.editTextViewyear);
+        email = (EditText) findViewById(R.id.editTextViewemailid);
+        mobileno = (EditText) findViewById(R.id.editTextViewmobileno);
         bsignup = (Button) findViewById(R.id.buttonsignup);
 
         //for images
@@ -60,12 +59,18 @@ public class Signup extends Activity {
             @Override
             public void onClick(View v) {
 
-                usernames = name1.getText().toString();
-                passwords = password1.getText().toString();
+                string_username = name1.getText().toString();
+                string_password = password1.getText().toString();
+                string_email = email.getText().toString();
+                //string_mobile = mobileno.getText().toString();
 
                 ParseUser user = new ParseUser();
-                user.setUsername(usernames);
-                user.setPassword(passwords);
+                user.setUsername(string_username);
+                user.setPassword(string_password);
+                user.setEmail(string_email);
+
+// other fields can be set just like with ParseObject
+                //user.put("Mobile No.", string_mobile);
 
                 user.signUpInBackground(new SignUpCallback() {
                     @Override
