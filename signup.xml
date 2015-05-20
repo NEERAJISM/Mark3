@@ -50,13 +50,13 @@
 
                 </FrameLayout>
 
-
             </LinearLayout>
 
            <LinearLayout
                android:layout_marginTop="10sp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+               android:padding="10sp"
                 android:background="@drawable/smalllinear2white"
                 android:orientation="vertical">
 
@@ -70,8 +70,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="15dp"
-                        android:layout_marginRight="59dp"
-                        android:text="Name"
+                        android:layout_marginRight="30dp"
+                        android:text="Username"
                         android:textStyle="italic"
                         android:textColor="#2f2f2f"
                         android:textSize="15dp" />
@@ -91,104 +91,39 @@
                         android:textSize="15dp" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-
-                    android:orientation="horizontal"
-                    android:weightSum="100">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_weight="33"
-                        android:text="Gender"
-                        android:textStyle="italic"
-                        android:textColor="#2f2f2f"
-                        android:textSize="15dp" />
-
-                    <RadioButton
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="35dp"
-                        android:layout_weight="33"
-                        android:text="Male"
-                        android:textColor="#778899"
-                        android:textSize="15dp" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="33"
-                        android:text="Female"
-                        android:textColor="#778899"
-                        android:textSize="15dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="60dp"
-                        android:text="D.O.B"
-                        android:textStyle="italic"
-                        android:textColor="#2f2f2f"
-                        android:textSize="15dp" />
-                    <EditText
-                        android:id="@+id/editTextViewdate"
-                        android:layout_width="fill_parent"
-                        android:layout_height="35dp"
-                        android:layout_weight="25"
-                        android:completionThreshold="1"
-                        android:gravity="bottom|center_horizontal"
-                        android:hint="dd"
-                        android:textStyle="italic"
-                        android:inputType="number"
-                        android:textColor="#778899"
-                        android:textSize="15dp" />
-
-                    <EditText
-                        android:id="@+id/editTextViewmonth"
-                        android:layout_width="fill_parent"
-                        android:layout_height="35dp"
-                        android:textStyle="italic"
-                        android:layout_weight="25"
-                        android:inputType="number"
-                        android:gravity="bottom|center_horizontal"
-                        android:hint="mm"
-                        android:textColor="#778899"
-                        android:textSize="15dp" />
-
-                    <EditText
-                        android:id="@+id/editTextViewyear"
-                        android:layout_width="fill_parent"
-                        android:layout_height="35dp"
-                        android:inputType="number"
-                        android:layout_marginRight="7dp"
-                        android:layout_weight="25"
-                        android:completionThreshold="1"
-                        android:gravity="center"
-                        android:textStyle="italic"
-                        android:hint="yyyy"
-                        android:textColor="#778899"
-                        android:textSize="15dp" />
-
-
-                </LinearLayout>
                <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="40dp"
+                   android:orientation="horizontal">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginLeft="15dp"
+                       android:layout_marginRight="30dp"
+                       android:text="Password"
+                       android:textStyle="italic"
+                       android:textColor="#2f2f2f"
+                       android:textSize="15dp" />
+
+                   <EditText
+                       android:id="@+id/EditTextpassword"
+                       android:layout_width="fill_parent"
+                       android:layout_height="35dp"
+                       android:textStyle="italic"
+                       android:password="true"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginRight="7dp"
+                       android:layout_weight="1"
+                       android:gravity="bottom|center_horizontal"
+                       android:hint="edit"
+                       android:textColor="#778899"
+                       android:inputType="textPersonName"
+                       android:textSize="15dp" />
+               </LinearLayout>
+
+                 <LinearLayout
                android:layout_width="fill_parent"
                android:layout_height="40dp"
                android:orientation="horizontal">
@@ -238,7 +173,7 @@
                        android:textSize="15dp" />
 
                    <EditText
-                       android:id="@+id/editTextViephone"
+                       android:id="@+id/editTextViewmobileno"
                        android:layout_width="fill_parent"
                        android:layout_height="35dp"
                        android:inputType="phone"
@@ -254,36 +189,6 @@
 
                </LinearLayout>
 
-               <LinearLayout
-                   android:layout_width="fill_parent"
-                   android:layout_height="40dp"
-                   android:orientation="horizontal">
-
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_gravity="center_vertical"
-                       android:layout_marginLeft="15dp"
-                       android:layout_marginRight="42dp"
-                       android:text="Pincode"
-                       android:textStyle="italic"
-                       android:textColor="#2f2f2f"
-                       android:textSize="15dp" />
-
-                   <EditText
-                       android:id="@+id/editTextViepin"
-                       android:layout_width="fill_parent"
-                       android:layout_height="35dp"
-                       android:layout_gravity="center_vertical"
-                       android:layout_marginRight="7dp"
-                       android:inputType="number"
-                       android:textStyle="italic"
-                       android:layout_weight="1"
-                       android:gravity="bottom|center_horizontal"
-                       android:hint="edit"
-                       android:textColor="#778899"
-                       android:textSize="15dp" />
-               </LinearLayout>
 
            </LinearLayout>
 
@@ -291,7 +196,8 @@
                 android:layout_marginTop="7dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Signup"
+                android:text="Sign up"
+                android:id="@+id/buttonsignup"
                 android:textAllCaps="false"
                 android:background="@drawable/smalllinear"
                 android:layout_gravity="center"
