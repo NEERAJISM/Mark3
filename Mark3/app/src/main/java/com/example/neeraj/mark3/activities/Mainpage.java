@@ -65,12 +65,15 @@ public class Mainpage extends ActionBarActivity
             case 3:
                 mTitle = getString(R.string.title_section3);
                 break;
+<<<<<<< HEAD
             case 4:
                 mTitle = "Batman";
                 break;
             case 5:
                 mTitle = "Joker";
                 break;
+=======
+>>>>>>> fb13623... first commit
         }
     }
 

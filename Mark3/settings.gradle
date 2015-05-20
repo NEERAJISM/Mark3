@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 include ':app', ':ParseStarterProject'
+=======
+include ':app'
+>>>>>>> fb13623... first commit

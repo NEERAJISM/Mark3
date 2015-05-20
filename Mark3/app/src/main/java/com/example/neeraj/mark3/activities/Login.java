@@ -5,28 +5,40 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+<<<<<<< HEAD
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.neeraj.mark3.R;
 import com.parse.LogInCallback;
 import com.parse.ParseUser;
+=======
+
+import com.example.neeraj.mark3.R;
+>>>>>>> fb13623... first commit
 
 /**
  * Created by NEERAJ on 08-May-15.
  */
 
+<<<<<<< HEAD
 public class Login extends Activity {
 
     Button signupbutton, loginbutton;
     EditText usernameet, passwordet;
     String username, password;
+=======
+public class Login  extends Activity{
+
+    Button bsignup;
+>>>>>>> fb13623... first commit
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginpage);
 
+<<<<<<< HEAD
         signupbutton = (Button) findViewById(R.id.bsignup);
         loginbutton = (Button) findViewById(R.id.blogin);
         usernameet = (EditText) findViewById(R.id.edittext_username);
@@ -64,3 +76,16 @@ public class Login extends Activity {
         });
     }
 }
+=======
+        bsignup = (Button) findViewById(R.id.bsignup);
+        bsignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(Login.this,Signup.class);
+                startActivity(i);
+            }
+        });
+    }
+}
+>>>>>>> fb13623... first commit
